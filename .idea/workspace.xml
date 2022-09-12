@@ -4,13 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="46dc737d-cd5d-4ad9-9d9e-e7a87d2c6212" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fly.toml" beforeDir="false" afterPath="$PROJECT_DIR$/fly.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/protohackers.iml" beforeDir="false" afterPath="$PROJECT_DIR$/protohackers.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tcp_echo.go" beforeDir="false" afterPath="$PROJECT_DIR$/tcp_echo.go" afterDir="false" />
+    <list default="true" id="46dc737d-cd5d-4ad9-9d9e-e7a87d2c6212" name="Changes" comment="first problem">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,8 +72,16 @@
       <updated>1662891403635</updated>
       <workItem from="1662891404821" duration="521000" />
       <workItem from="1662892054711" duration="5751000" />
-      <workItem from="1662903694719" duration="1494000" />
+      <workItem from="1662903694719" duration="2244000" />
     </task>
+    <task id="LOCAL-00001" summary="first problem">
+      <created>1662905908836</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1662905908836</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -94,6 +97,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="first problem" />
+    <option name="LAST_COMMIT_MESSAGE" value="first problem" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
