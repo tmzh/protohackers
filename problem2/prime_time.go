@@ -1,8 +1,12 @@
 package main
 
 import (
+	"errors"
 	"fmt"
+	"log"
 	"math"
+	"net"
+	"os"
 )
 
 func isPrime(n int) bool {
@@ -26,5 +30,28 @@ func isPrime(n int) bool {
 func main() {
 	isPrime(0)
 
-  listener, err := net.Listen("tcp", ":9000")
+	listener, err := net.Listen("tcp", ":9000")
+	if err != nil {
+		fmt.Println("Cannot create listener, err:", err)
+		os.Exit(1)
+	}
+	log.Printf("Listening on %s\n", listener.Addr())
+
+	for {
+		conn, err := listener.Accept()
+		if err != nil {
+			if errors.Is(err, net.ErrClosed) {
+				log.Printf("Connection closed\n")
+				return
+			}
+
+			log.Printf("Failed to accept incoming connection\n")
+			continue
+		}
+
+		go func(c net.Conn) {
+
+		}(conn)
+	}
+
 }
