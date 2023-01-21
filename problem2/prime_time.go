@@ -27,9 +27,11 @@ func isPrime(n int) bool {
 	return true
 }
 
-func main() {
-	isPrime(0)
+func parseMessage() {
 
+}
+
+func main() {
 	listener, err := net.Listen("tcp", ":9000")
 	if err != nil {
 		fmt.Println("Cannot create listener, err:", err)
@@ -50,6 +52,7 @@ func main() {
 		}
 
 		go func(c net.Conn) {
+			b, err := io.ReadAll
 
 		}(conn)
 	}
