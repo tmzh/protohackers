@@ -22,6 +22,9 @@ func isPrime(f float64) bool {
 	i := 5
 	stop := int(math.Sqrt(float64(n)))
 	for i <= stop {
+		/* All primes greater than 3 are of the form 6k +/- 1
+		   Check only 6k +/- 1
+		*/
 		if (n%i == 0) || (n%(i+2) == 0) {
 			return false
 		}
@@ -30,6 +33,10 @@ func isPrime(f float64) bool {
 	return true
 }
 
+/*
+Checks if both Method and Number are present in JSON
+Method can only be "isPrime"
+*/
 func isMalformed(message *Message) bool {
 	if message.Method == nil || *message.Method != "isPrime" || message.Number == nil {
 		b, _ := json.Marshal(message)
@@ -40,6 +47,9 @@ func isMalformed(message *Message) bool {
 	return false
 }
 
+/*
+Use pointers to distinguish between missing fields (nil) and zero values
+*/
 type Message struct {
 	Method *string  `json:"method"`
 	Number *float64 `json:"number"`
