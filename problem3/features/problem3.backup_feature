@@ -1,0 +1,17 @@
+Feature: Means to an End
+  TCP Clients can insert and 
+  query timestamped prices
+
+  Scenario: Insert message
+    Given the following messages:
+      | type | int32a | int32b |
+      | I    | 12345  | 101    |
+      | I    | 12346  | 102    |
+      | I    | 12347  | 100    |
+      | I    | 40960  | 5      |
+      | Q    | 12288  | 16384  |
+    And the messages are encoded into bytes
+    When I send the bytes to TCP server
+    Then I get the following integer in bytes
+    101
+    
